@@ -126,126 +126,159 @@ function navChange(){
 	}
 }
 
-		var consult = document.getElementsByClassName('consult')[0];
-		var discount = document.getElementsByClassName('discount')[0];
-		var code = document.getElementsByClassName('code')[0];
-		var kart = document.getElementsByClassName('kart')[0];
-		var eight = document.getElementsByClassName('eight')[0];
-		consult.style.right = '-80px';
-		discount.style.right = '-80px';
-		code.style.right = '-80px';
-		kart.style.right = '-80px';
-		var time1;
+var consult = document.getElementsByClassName('consult')[0];
+var discount = document.getElementsByClassName('discount')[0];
+var code = document.getElementsByClassName('code')[0];
+var kart = document.getElementsByClassName('kart')[0];
+var eight = document.getElementsByClassName('eight')[0];
+consult.style.right = '-80px';
+discount.style.right = '-80px';
+code.style.right = '-80px';
+kart.style.right = '-80px';
+var time1;
 
 
 consult.onmouseover = function () {
-		    var t = parseInt(consult.style.right);
-		    clearInterval(time1);
-		    time1 = setInterval(function (){
-		        t++;
-		        consult.style.right = t + 'px';
-		        if(t >= 0){
-		            consult.style.right = '0px';
-		            clearInterval(time1);
-		        }
-		        },0.1);
-		}
-		consult.onmouseout = function () {
-		    var t = parseInt(consult.style.right);
-		    clearInterval(time1);
-		    time1 = setInterval(function (){
-		        t--;
-		        consult.style.right = t + 'px';
-		        if(t <= -80){
-		            consult.style.right = '-80px';
-		            clearInterval(time1);
-		        }
-		        },0.1);
-		}
+var t = parseInt(consult.style.right);
+clearInterval(time1);
+time1 = setInterval(function (){
+    t++;
+    consult.style.right = t + 'px';
+    if(t >= 0){
+        consult.style.right = '0px';
+        clearInterval(time1);
+    }
+    },0.1);
+}
+consult.onmouseout = function () {
+var t = parseInt(consult.style.right);
+clearInterval(time1);
+time1 = setInterval(function (){
+    t--;
+    consult.style.right = t + 'px';
+    if(t <= -80){
+        consult.style.right = '-80px';
+        clearInterval(time1);
+    }
+    },0.1);
+}
 
-		var time2;
-		discount.onmouseover = function () {
-		    var t = parseInt(discount.style.right);
-		    clearInterval(time2);
-		    time2 = setInterval(function (){
-		        t++;
-		        discount.style.right = t + 'px';
-		        if(t >= 0){
-		            discount.style.right = '0px';
-		            clearInterval(time2);
-		        }
-		    },0.1);
-		}
-		discount.onmouseout = function () {
-		    var t = parseInt(discount.style.right);
-		    clearInterval(time2);
-		    time2 = setInterval(function (){
-		        t--;
-		        discount.style.right = t + 'px';
-		        if(t <= -80){
-		            discount.style.right = '-80px';
-		            clearInterval(time2);
-		        }
-		    },0.1);
-		}
+var time2;
+discount.onmouseover = function () {
+var t = parseInt(discount.style.right);
+clearInterval(time2);
+time2 = setInterval(function (){
+    t++;
+    discount.style.right = t + 'px';
+    if(t >= 0){
+        discount.style.right = '0px';
+        clearInterval(time2);
+    }
+},0.1);
+}
+discount.onmouseout = function () {
+var t = parseInt(discount.style.right);
+clearInterval(time2);
+time2 = setInterval(function (){
+    t--;
+    discount.style.right = t + 'px';
+    if(t <= -80){
+        discount.style.right = '-80px';
+        clearInterval(time2);
+    }
+},0.1);
+}
 
-		var time3;
-		code.onmouseover = function () {
-		    var t = parseInt(code.style.right);
-		    clearInterval(time3);
-		    time3 = setInterval(function (){
-		        t++;
-		        code.style.right = t + 'px';
-		        eight.src="image/erwei.png";
-		        eight.classList.remove("eight");
-		        eight.classList.add("eight");
-		        if(t >= 0){
-		            code.style.right = '0px';
-		            clearInterval(time3);
-		        }
-		    },0.1);
-		}
-		code.onmouseout = function () {
-		    var t = parseInt(code.style.right);
-		    clearInterval(time3);
-		    time3 = setInterval(function (){
-		        t--;
-		        code.style.right = t + 'px';
-		        eight.src="image/serwei.png";
-		        eight.classList.remove("eight");
-		        eight.classList.add("eight");
-		        if(t <= -80){
-		            code.style.right = '-80px';
-		            clearInterval(time3);
-		        }
-		    },0.1);
-		}
+var time3;
+code.onmouseover = function () {
+var t = parseInt(code.style.right);
+clearInterval(time3);
+time3 = setInterval(function (){
+    t++;
+    code.style.right = t + 'px';
+    eight.src="image/erwei.png";
+    eight.classList.remove("eight");
+    eight.classList.add("eight");
+    if(t >= 0){
+        code.style.right = '0px';
+        clearInterval(time3);
+    }
+},0.1);
+}
+code.onmouseout = function () {
+var t = parseInt(code.style.right);
+clearInterval(time3);
+time3 = setInterval(function (){
+    t--;
+    code.style.right = t + 'px';
+    eight.src="image/serwei.png";
+    eight.classList.remove("eight");
+    eight.classList.add("eight");
+    if(t <= -80){
+        code.style.right = '-80px';
+        clearInterval(time3);
+    }
+},0.1);
+}
 
-		var time4;
-		kart.onmouseover = function () {
-		    var t = parseInt(kart.style.right);
-		    clearInterval(time4);
-		    time4 = setInterval(function (){
-		        t++;
-		        kart.style.right = t + 'px';
-		        if(t >= 0){
-		            kart.style.right = '0px';
-		            clearInterval(time4);
-		        }
-		    },0.1);
-		}
-		kart.onmouseout = function () {
-		    var t = parseInt(kart.style.right);
-		    clearInterval(time4);
-		    time4 = setInterval(function (){
-		        t--;
-		        kart.style.right = t + 'px';
-		        if(t <= -80){
-		            kart.style.right = '-80px';
-		            clearInterval(time4);
-		        }
-		    },0.1);
-		}
+var time4;
+kart.onmouseover = function () {
+var t = parseInt(kart.style.right);
+clearInterval(time4);
+time4 = setInterval(function (){
+    t++;
+    kart.style.right = t + 'px';
+    if(t >= 0){
+        kart.style.right = '0px';
+        clearInterval(time4);
+    }
+},0.1);
+}
+kart.onmouseout = function () {
+var t = parseInt(kart.style.right);
+clearInterval(time4);
+time4 = setInterval(function (){
+    t--;
+    kart.style.right = t + 'px';
+    if(t <= -80){
+        kart.style.right = '-80px';
+        clearInterval(time4);
+    }
+},0.1);
+}
+
+var money = document.getElementById("money");
+var display = document.getElementById("display");
+function md(value){
+	display.innerHTML = "¥ "+value;
+}
+
+var news = document.getElementById("news");
+function move() {
+    var top = news.offsetTop - 1; 
+    news.style.top = top + "px"; 
+
+    if (-1 * news.offsetTop >= news.offsetHeight / 2) {
+        news.style.top = 0;
+    }
+}
+var t = setInterval(move, 25);
+
+
+var li = document.getElementsByTagName("li");
+for (var i = 0; i < li.length; i++) {
+
+    li[i].onmouseout = function () {
+
+        t = setInterval(move, 25);
+
+    };
+
+    li[i].onmouseover = function () {
+        clearInterval(t);
+    };
+}	
+
 
 // function text_animate(obj, json, callback){
 // 	clearInterval(obj.text_timer);
@@ -291,9 +324,3 @@ consult.onmouseover = function () {
 // text_box.onmouseout = function(){
 // 	text_timer = setInterval(text_next,2000);
 // }
-
-var money = document.getElementById("money");
-var display = document.getElementById("display");
-function md(value){
-	display.innerHTML = "¥ "+value;
-}

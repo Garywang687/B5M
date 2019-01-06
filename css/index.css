@@ -679,14 +679,37 @@ ul,li{
 	right: 0px;			
 }
 .all{
-	position: absolute;
+	position: fixed;
 	height: 550px;
 	width: 123px;
 	top: 150px;
 	right: 0px;
-	overflow: hidden;	
+	overflow: hidden;
 }
 
+.right2{
+	position: relative;
+	top:35px;
+	height: 330px;
+	overflow: hidden;
+}
+.news{
+	position: absolute;
+	padding-left: 20px;
+	padding-top: 2px;
+	list-style: none;					
+}
+.news li{
+	height:29px; 
+}
+
+.right2 a{
+	text-decoration: none;
+	color:#fe6c00;
+	font-size: 12px;
+	line-height: 31px;
+	font-weight: bolder;
+}
 
 #information>p{
 	text-align:center;
