@@ -13,10 +13,15 @@ var big_img0 = document.createElement('img');
 big_img0.src="../image/pp0.jpeg";
 big_img0.style['width']="800px";
 big_img0.style['position']="absolute";
+big_img0.style['top']="0";
+big_img0.style['left']="0";
+
 var big_img1 = document.createElement('img');
 big_img1.src="../image/pp1.jpeg";
 big_img1.style['width']="800px";
 big_img1.style['position']="absolute";
+big_img1.style['top']="0";
+big_img1.style['left']="0";
 
 
 big_img.style['position']="absolute";
@@ -56,14 +61,15 @@ sp1.onmouseover = function(){
 	index=1;
 }
 
+var main = document.getElementById("main");
 img.onmouseover = function(){
-	slider.style.display = 'block';
+	slider.style['display'] = 'block';
 	detail.appendChild(big_img);
 	if(index==0){
 		big_img.appendChild(big_img0);
 		img0.onmousemove = function(ev){
- 			var oL = ev.clientX - img.offsetLeft - slider.offsetWidth/2;
- 			var oT = ev.clientY - img.offsetTop - slider.offsetHeight/2;
+ 			var oL = ev.clientX - img.offsetLeft -main.offsetLeft - slider.offsetWidth/2;
+ 			var oT = ev.clientY - img.offsetTop -main.offsetTop -38 - slider.offsetHeight/2;
  			var oMaxw = img0.offsetWidth - slider.offsetWidth;
  			var oMaxh = img0.offsetHeight - slider.offsetHeight;
 
@@ -80,8 +86,8 @@ img.onmouseover = function(){
 	}else{
 		big_img.appendChild(big_img1);
 		img1.onmousemove = function(ev2){
- 			var oL = ev2.clientX - img.offsetLeft - slider.offsetWidth/2;
- 			var oT = ev2.clientY - img.offsetTop - slider.offsetHeight/2;
+ 			var oL = ev2.clientX - img.offsetLeft -main.offsetLeft - slider.offsetWidth/2;
+ 			var oT = ev2.clientY - img.offsetTop -main.offsetTop -38 - slider.offsetHeight/2;
  			var oMaxw = img1.offsetWidth - slider.offsetWidth;
  			var oMaxh = img1.offsetHeight - slider.offsetHeight;
 
@@ -182,6 +188,9 @@ minus.onclick = function(){
 	if(num!=1){
 		num--;
 	}
+	else{
+		minus.style['cursor'] = 'not-allowed';
+	}
 	write.value =num;
 }
 
@@ -189,5 +198,8 @@ plus.onclick = function(){
 	num = write.value;
 	if(num!=5)
 		num++;
+	else{
+		plus.style['cursor'] = 'not-allowed';
+	}
 	write.value =num;
 }
